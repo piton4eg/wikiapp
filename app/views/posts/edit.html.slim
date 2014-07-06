@@ -1,0 +1,10 @@
+h1 Редактирование страницы
+
+= form_for @post, url: @post.post_url, method: :put do |f|
+  = render 'errors', subject: @post
+  = render 'common_form', f: f
+
+= link_to 'Просмотр', @post.post_url
+'|
+= link_to 'На главную', root_path
+

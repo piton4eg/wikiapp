@@ -1,0 +1,10 @@
+h1 Создание страницы
+
+= form_for @post, url: @form_url, method: :post do |f|
+  = render 'errors', subject: @post
+  .field
+    | Имя
+    = f.text_field :name
+  = render 'common_form', f: f
+
+= link_to 'На главную', root_path

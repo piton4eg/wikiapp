@@ -1,0 +1,17 @@
+h2 Поддерево:
+= posts_tree_for(@subtree)
+
+p#notice = notice
+
+p
+  strong Название:
+  = @post.title
+p
+  strong Текст:
+  = markdown @post.text
+
+= link_to 'Создать подстраницу', @post.post_url(:add)
+'|
+= link_to 'Редактировать', @post.post_url(:edit)
+'|
+= link_to 'На главную', root_path
